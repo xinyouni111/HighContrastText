@@ -1,42 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.highcontrast">
-
-    <queries>
-        <intent>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent>
-    </queries>
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
+        android:label="美团高对比文字"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HC"
-        tools:targetApi="31">
-
+        android:hasCode="true">
         <meta-data android:name="xposedmodule" android:value="true" />
-        <meta-data android:name="xposeddescription" android:value="高对比度文字模块 — 强制所有文字白字黑底，支持选作用域、每应用独立配置颜色字号" />
+        <meta-data android:name="xposeddescription" android:value="为美团众包App强制启用系统级高对比文字效果，原理：Hook Settings读取，使系统渲染引擎自动增强文字对比度" />
         <meta-data android:name="xposedminversion" android:value="82" />
-
-        <activity
-            android:name=".ui.ScopeActivity"
-            android:label="@string/app_name"
-            android:exported="true"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".ui.ConfigActivity"
-            android:label="@string/per_app_config"
-            android:exported="false"
-            android:parentActivityName=".ui.ScopeActivity" />
-
     </application>
 </manifest>
