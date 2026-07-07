@@ -10,16 +10,16 @@
         </intent>
     </queries>
 
-    <meta-data android:name="xposedmodule" android:value="true" />
-    <meta-data android:name="xposeddescription" android:value="高对比度文字模块 — 强制所有文字白字黑底，支持选作用域、每应用独立配置颜色字号" />
-    <meta-data android:name="xposedminversion" android:value="82" />
-
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.HC"
         tools:targetApi="31">
+
+        <meta-data android:name="xposedmodule" android:value="true" />
+        <meta-data android:name="xposeddescription" android:value="高对比度文字模块 — 强制所有文字白字黑底，支持选作用域、每应用独立配置颜色字号" />
+        <meta-data android:name="xposedminversion" android:value="82" />
 
         <activity
             android:name=".ui.ScopeActivity"
