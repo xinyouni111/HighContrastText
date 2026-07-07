@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0d1117"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 预览 -->
+        <FrameLayout
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="16dp"
+            android:background="#000"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/preview_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="高对比度预览 High Contrast"
+                    android:textColor="#FFF"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/preview_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="提示文字效果 preview hint"
+                    android:textColor="#B4B4B4"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- 文字颜色 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="文字颜色" android:textColor="#999" android:textSize="13sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <View android:id="@+id/tc_preview" android:layout_width="32dp" android:layout_height="32dp"
+                android:background="#FFF" />
+            <EditText android:id="@+id/et_text" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" android:layout_weight="1" android:background="#161b22"
+                android:hint="#FFFFFF" android:padding="10dp" android:textColor="#FFF" android:textColorHint="#555" />
+        </LinearLayout>
+
+        <!-- 背景颜色 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="背景颜色" android:textColor="#999" android:textSize="13sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <View android:id="@+id/bg_preview" android:layout_width="32dp" android:layout_height="32dp"
+                android:background="#000" />
+            <EditText android:id="@+id/et_bg" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" android:layout_weight="1" android:background="#161b22"
+                android:hint="#000000" android:padding="10dp" android:textColor="#FFF" android:textColorHint="#555" />
+        </LinearLayout>
+
+        <!-- 提示颜色 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="提示颜色" android:textColor="#999" android:textSize="13sp" />
+        <EditText android:id="@+id/et_hint" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:background="#161b22" android:hint="#B4B4B4"
+            android:padding="10dp" android:textColor="#FFF" android:textColorHint="#555" />
+
+        <!-- 链接颜色 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="链接颜色" android:textColor="#999" android:textSize="13sp" />
+        <EditText android:id="@+id/et_link" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:background="#161b22" android:hint="#00FFFF"
+            android:padding="10dp" android:textColor="#FFF" android:textColorHint="#555" />
+
+        <!-- 字号增量 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="字号增量 (px)" android:textColor="#999" android:textSize="13sp" />
+        <EditText android:id="@+id/et_size" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:background="#161b22" android:hint="0"
+            android:inputType="numberDecimal" android:padding="10dp" android:textColor="#FFF" android:textColorHint="#555" />
+
+        <!-- 按钮 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:orientation="horizontal">
+            <Button android:id="@+id/btn_reset" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp" android:layout_weight="1" android:background="#333"
+                android:text="重置" android:textColor="#CCC" />
+            <Button android:id="@+id/btn_save" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_marginStart="8dp" android:layout_weight="1" android:background="#58a6ff"
+                android:text="保存" android:textColor="#FFF" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
